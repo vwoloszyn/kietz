@@ -22,10 +22,13 @@ import urllib.request
 #es = Elasticsearch([{'host':"es01",'port':"9200"}],http_auth=("elastic","nopassword"))
 import json
 import datetime
+from django.shortcuts import redirect
+
 
 def index(request):
+    return render(request,"clean.html",{})
+    #return render(request,"index.html",{})
 
-    return render(request,"index.html",{})
 
 
 
