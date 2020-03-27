@@ -1,7 +1,7 @@
 version: '3.5'
 
 services:
-  django:
+  django_kietz:
     container_name: kietz_interface
     build:
       context: ./services/django
@@ -13,8 +13,8 @@ services:
     ports:
       - "81:8000"
     networks:
-      - fake_net
+      - kietz_net
 
 
 networks:
-  fake_net:
+  kietz_net:
