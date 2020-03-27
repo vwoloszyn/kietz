@@ -1,0 +1,1016 @@
+{% load humanize %}
+
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html class="gr__127_0_0_1">
+<head>
+
+    <?xml version="1.0"?>
+
+
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/232/police-cars-revolving-light_1f6a8.png">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Untrue News: a fake search engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74451848-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-74451848-2');
+</script>
+
+
+
+    <style type="text/css">
+
+
+
+    .center {
+  text-align: center;
+}
+
+.pagination {
+
+  bottom:70px;
+position: fixed;
+background-color: white;
+}
+
+.bot_bar{
+background-color: white;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #C55340;
+  color: white;
+  border: 1px solid #C55340;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+        * {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #d9d9d9;
+  float: left;
+  width: 80%;
+  background: white;
+  border-radius: 0;
+-webkit-appearance: none;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 11px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 0px solid #d9d9d9;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+          body, main {
+            margin: 0 auto;
+            color:#494949;
+          }
+          .body, .tip {
+            stroke: #fff;
+          }
+          html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            box-sizing: border-box;
+          }
+          footer, header, main {
+            display: block;
+          }
+          a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+            _color: #19865C;
+            color: #4285f4;
+            text-decoration: none;
+          }
+
+          img {
+            border-style: none;
+          }
+          header {
+            border-bottom: 1px solid #efefef;
+          }
+          svg:not(:root) {
+            overflow: hidden;
+          }
+          body {
+            _max-width: 960px;
+            color: #525252;
+            font-family: Roboto, sans-serif;
+          }
+          main {
+            text-align: center;
+          }
+          .u-clearfix:after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          .exhaust.two, .fuel, .removehole {
+            display: none;
+          }
+          h1, h2, h3, h4, h5, p, ul {
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+            color:#494949;
+          }
+          header {
+            padding-top: 00px;
+            padding-bottom: 10px;
+          }
+
+          .logo h2 {
+            font-weight: 700;
+            margin-top: 0px;
+          }
+          .release-notes {
+            float: right;
+            margin-top: 7px;
+          }
+          .release-notes p {
+            font-size: 14px;
+          }
+          .figure {
+            margin-top: 19vh;
+            height: 173px;
+          }
+          .figure__animation {
+            max-width: 265px;
+            position: relative;
+            z-index: -9;
+          }
+          .tip {
+            stroke-width: 3px;
+            -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
+          }
+          .body {
+            fill: #6DDCBD;
+            -webkit-transform: scaleX(1.25);
+            transform: scaleX(1.25);
+            -webkit-transform-origin: center;
+            transform-origin: center;
+            stroke-width: 3px;
+          }
+          .box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          .circle {
+            fill: #6DDCBD;
+            stroke: #fff;
+            stroke-width: 7px;
+          }
+          .exhaust {
+            border-bottom-left-radius: 4px;
+          }
+          .exhaust.two, .exhaust__line {
+            -webkit-animation: thurst 70ms infinite ease-in-out alternate;
+            animation: thurst 70ms infinite ease-in-out alternate;
+          }
+          .smoke {
+            -webkit-animation: smoke .1s infinite ease-in-out alternate;
+            animation: smoke .1s infinite ease-in-out alternate;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+            opacity: .8;
+          }
+          @-moz-document url-prefix() {
+            .smoke {
+              animation: smokeFirefox .2s infinite ease-in-out alternate;
+            }
+          }
+          @-webkit-keyframes smoke {
+            0% {
+              -webkit-transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);
+              transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);
+            }
+            100% {
+              -webkit-transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);
+              transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);
+            }
+          }
+          @keyframes smoke {
+            0% {
+              -webkit-transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);
+              transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);
+            }
+            100% {
+              -webkit-transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);
+              transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);
+            }
+          }
+          @-webkit-keyframes smokeFirefox {
+            0% {
+              -webkit-transform: scale(1.58, 1.2) translateY(-75px) skew(0);
+              transform: scale(1.58, 1.2) translateY(-75px) skew(0);
+            }
+            100% {
+              -webkit-transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);
+              transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);
+            }
+          }
+          @keyframes smokeFirefox {
+            0% {
+              -webkit-transform: scale(1.58, 1.2) translateY(-75px) skew(0);
+              transform: scale(1.58, 1.2) translateY(-75px) skew(0);
+            }
+            100% {
+              -webkit-transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);
+              transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);
+            }
+          }
+          .flame 0%, .flame 100% {
+            -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg);
+            transform: translate(265px, 249px) scale(1.9) rotate(180deg);
+          }
+          .flame {
+            -webkit-animation: burnInner2 .1s infinite ease-in-out alternate;
+            animation: burnInner2 .1s infinite ease-in-out alternate;
+          }
+          @-webkit-keyframes burnInner2 {
+            0% {
+              -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);
+              transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);
+            }
+            100% {
+              -webkit-transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);
+              transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);
+            }
+          }
+          @keyframes burnInner2 {
+            0% {
+              -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);
+              transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);
+            }
+            100% {
+              -webkit-transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);
+              transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);
+            }
+          }
+          @-webkit-keyframes thurst {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: .5;
+            }
+          }
+          @keyframes thurst {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: .5;
+            }
+          }
+          h2 {
+            font-size: 22px;
+            max-width: 500px;
+            _margin: 5px auto 0;
+          }
+          main p {
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 390px;
+            margin: 15px auto 0;
+            color: #747755;
+          }
+          footer {
+            _text-align: center;
+            padding: 25px 0;
+            _position: fixed;
+            left:50%;
+            bottom: 0;
+            width: 100%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            border-top: 1px solid #efefef;
+          }
+          .option {
+            float: left;
+            width: 33.33%;
+            box-sizing: border-box;
+            padding-right: 5px;
+
+          }
+          .option svg {
+            width: 25px;
+            height: 25px;
+            fill: gray;
+            border: 1px solid #d6d6d6;
+            padding: 5px;
+            border-radius: 100%;
+            float: left;
+            margin-right: 10px;
+          }
+          .option div {
+            display: table;
+          }
+          .option h4 {
+            color: #19865C;
+            font-size: 19px;
+          }
+          .option p {
+            font-weight: 300;
+            font-size: 15px;
+            padding-top: 3px;
+            color: #757575;
+          }
+          @media (max-width: 996px) {
+            body, footer {
+              max-width: 780px;
+            }
+            .logo {
+              width: 100% !important;;
+            }
+
+
+          }
+
+
+          @media (min-width: 801px) and (max-height: 730px) {
+            .figure {
+              margin-top: 80px;
+            }
+          }
+          @media (min-width: 801px) and (max-height: 600px) {
+            footer {
+              position: relative;
+              margin: 135px auto 0;
+            }
+            .figure {
+              margin-top: 50px;
+            }
+          }
+
+         .header-wrap{
+
+
+            background:#36acb8;
+            text-size-adjust: 100%;
+            color: rgb(34, 34, 34);
+            vertical-align: baseline;
+            margin: 0px;
+            padding: 0px;
+            border-width: 0px;
+            border-style: initial;
+            border-color: initial;
+            border-image: initial;
+            font: inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px;
+            _padding-top: 16px;
+            _padding-left:150px;
+
+            position: relative;
+            z-index: 15;
+            top: 0px;
+
+         }
+
+         #duckbar_static{
+         color: #222;
+border: 0;
+font: inherit;
+font-size: 100%;
+vertical-align: baseline;
+list-style: none;
+margin: 0;
+padding: 0 0 1px;
+text-transform: capitalize;
+display: inline-block;
+float: none;
+overflow: hidden;
+white-space: nowrap;
+
+
+}
+ #duckbar_static li{
+float:left;
+padding-right:7px;
+}
+
+
+.dropdown-content .bar_link {
+    color:#222;
+}
+
+
+
+
+
+
+
+.bar_link {
+    color:#ffffff;
+    display: block;
+    font-size: 15px;
+    position: relative;
+    margin: 0 7px;
+    height: 37px;
+    line-height: 37px;
+    _
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.bar_link.is-active {
+    _color: #ffffff;
+    font-weight: 600;
+    border-bottom: solid 1px #111;
+}
+
+
+
+
+
+
+.results{
+max-width: 650px;
+color: #222;
+margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+font-size: 100%;
+vertical-align: baseline;
+margin-bottom: 2em;
+margin-top: .5em;
+position: relative;
+padding-bottom: 20px;
+padding-left: 150px;
+}
+.result{
+text-align:left;
+color: #222;
+margin: 0;
+display: block;
+padding: 0;
+font: inherit;
+font-size: 100%;
+vertical-align: baseline;
+box-sizing: border-box;
+-webkit-font-smoothing: subpixel-antialiased;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+margin-bottom: 14px;
+position: relative;
+#word-wrap: break-word;
+border-radius: 4px;
+border: 1px solid transparent;
+_padding-left: 150px;
+}
+
+.result h2 a{
+font-weight: 500;
+font-size:15px;
+
+-webkit-font-smoothing: subpixel-antialiased;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+margin: 0;
+padding: 0;
+border: 0;
+_font: inherit;
+_font-size: 100%;
+font-family: inherit;
+text-decoration: none;
+vertical-align: middle;
+display: inline-block;
+_max-width: 100%;
+
+line-height: 1.22;
+margin-bottom: -0.05em;
+
+}
+
+.result h4 {
+-webkit-font-smoothing: subpixel-antialiased;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+padding: 0;
+border: 0;
+font: inherit;
+font-size: 12px;
+vertical-align: baseline;
+color: #494949;
+line-height: 1.45;
+margin: 0;
+}
+
+.result__url{
+
+font-size: 12px;
+vertical-align: baseline;
+
+line-height: 1.45;
+margin: 0;
+
+}
+
+.resultStats{
+color: #494949;
+padding-left: 150px;
+text-align:left;
+font-size: 12px;
+vertical-align: baseline;
+
+line-height: 1.45;
+margin-top: 10px;
+
+}
+
+.results--sidebar{
+    position:absolute;
+    top:100px;
+    color: #222;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: block;
+    overflow: hidden;
+    padding: 0 2px;
+    margin: 42px 10px 100px 640px;
+    padding-right:100px;
+    text-align: center;
+    padding-left:100px;
+
+
+}
+
+.sidebar-modules{
+    min-height: 453px;
+    min-width: 465px;
+    _position: absolute;
+    _width: 100%;
+    _max-width: 100%;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.06);
+    border: 1px solid rgba(150,150,150,0.3);
+    border-bottom-color: rgba(125,125,125,0.3);
+    font-weight: 400;
+    margin: 0 -1px 26px;
+    border-radius: 4px;
+
+
+}
+
+
+ @media (max-width: 996px) {
+           .header-wrap {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .results{
+            padding-left: 5px;
+                padding-right: 5px;
+
+            }
+
+                        .resultStats{
+            padding-left: 5px;
+                padding-right: 5px;
+
+            }
+
+            .results--sidebar{
+            display: none;
+            }
+
+
+
+
+          }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  _padding: 16px;
+  _font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  padding: 10px;
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  color: #494949;
+
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .bar_link {
+
+height: 30px;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #4285f4 !important;
+  font-size: 12px;
+  _padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+    ol {
+    color: #19865C;
+    text-align: left;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+color: #19865C;
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 50%;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+
+ol li::before {
+color: #19865C;
+  _content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
+}
+
+.entities{
+   margin-top:7px;
+   text-align:center;
+    font-size: 12px;
+    vertical-align: baseline;
+    line-height: 1.45;
+    _margin: 0;
+
+}
+    .entities li:after {
+    color: #19865C;
+    content: "· ‎";
+}
+.entities li:first-child:after {
+    content: "";
+}
+
+.entities li:last-child:after {
+    content: "";
+}
+
+
+.result__snippet{
+
+margin-top:5px;
+}
+
+.logo{
+
+ font-size:30px;
+ float: left;
+ padding-left:10px;
+ margin-top:25px;
+ width:150px
+
+
+}
+
+.logo a, .logo a:visited{
+
+color: #fff;
+}
+
+.result__extras{
+
+padding-top:7px;
+padding-bottom:2px;
+font-size:16px;
+}
+
+
+
+.bot_button{
+background: #2196F3;
+color: white;
+display: block;
+width: 97%;
+max-width: 500px;
+height: 40px;
+bottom: 20px;
+position: fixed;
+
+font-size: 20px;
+padding-top: 10px;
+
+
+}
+    </style>
+
+
+    <script>
+
+
+
+
+            /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.js-dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    </script>
+</head>
+<body data-gr-c-s-loaded="true">
+
+<div id="header_wrapper" class="header-wrap js-header-wrap" style="display: inline-block; width:100%">
+    <div class="center logo" style=" "><a href="/coronavirus">KIETZ</a></div>
+
+    <div id="header" style=" display: inline-block; padding-left: 0px; width: 100%; max-width: 500px" class="header  cw">
+
+
+
+        <div class="header__search-wrap">
+
+            <div  class="header__content  header__search">
+                <form class="example" action="search" style="max-width:500px">
+                    <BR>
+                    <input type="text" placeholder="Search in your Kietz..." name="q" value="{{q}}">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div id="duckbar" class="zcm-wrap  zcm-wrap--header  is-noscript-hidden">
+            <div class="zcm">
+                <ul class="zcm__menu zcm__constant has-zci" id="duckbar_static">
+                    <li class="zcm__item"><a data-zci-link="<news" class="bar_link is-active" href="#">All</a></li>
+                    <!--<li class="zcm__item"><a data-zci-link="images" class="bar_link" href="#">I Need Help</a></li>-->
+                    <!--<li class="zcm__item"><a data-zci-link="videos" class="bar_link" href="#">I Want to help</a></li>-->
+
+                </ul>
+
+                <ul class="" id="duckbar_static">
+                    <li class="zcm__item">
+                        <a onclick="myFunction()" class="js-dropbtn bar_link">Settings ▾</a>
+                          <div id="myDropdown" class="dropdown-content">
+                              <h5>Automatic Translation:</h5>
+                                   <hr>
+                              <a class="bar_link" href="search?q={{q}}&transl=none">{% if translate_to|lower == "none"%}✓ {% endif %} Original</a>
+                            <a class="bar_link" href="search?q={{q}}&transl=en">{% if translate_to|lower == "en"%}✓ {% endif %}English</a>
+                            <a class="bar_link" href="search?q={{q}}&transl=pt">{% if translate_to|lower == "pt"%}✓ {% endif %}Portuguese</a>
+                              <a class="bar_link" href="search?q={{q}}&transl=es">{% if translate_to|lower == "es"%}✓ {% endif %}Spanish</a>
+                            <a class="bar_link" href="search?q={{q}}&transl=de">{% if translate_to|lower == "de"%}✓ {% endif %}German</a>
+                            <br>
+                              <h5>Search Region:</h5>
+                                   <hr>
+                              <a class="bar_link" href="search?q={{q}}&region=none">{% if region == "none"%}✓ {% endif %}All Regions</a>
+                            <a class="bar_link" href="search?q={{q}}&region=br">{% if region == "br"%}✓ {% endif %}Brazil</a>
+                            <a class="bar_link" href="search?q={{q}}&region=de">{% if region == "de"%}✓ {% endif %}Germany</a>
+                            <a class="bar_link" href="search?q={{q}}&region=us">{% if region == "us"%}✓ {% endif %}U.S.</a>
+                              <a class="bar_link" href="search?q={{q}}&region=af">{% if region == "af"%}✓ {% endif %}Africa</a>
+                              <a class="bar_link" href="search?q={{q}}&region=es">{% if region == "es"%}✓ {% endif %}Spain</a>
+                          </div>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+    .result{
+    _border: 1px solid #ddd;
+    display: block;
+    max-height:60px
+    }
+
+    .desc a {
+        font-size: 18px;
+    }
+    .desc{
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 65px;
+        _line-height: 0.5pm;
+    }
+
+.details{
+
+margin-top:10px;
+}
+
+</style>
+<main>
+    <div class="resultStats">About 5 {{stats.count}} offers close to you </div>
+
+
+
+    <div class="results" >
+
+
+
+
+        <div class="result" style="">
+            <div class="img" style="float:left; ">
+                <img src="/static/images/charlie.jpeg" height="65px">
+            </div>
+            <div class="desc">
+                <a href="#" class="title"> I wanna go for a walk</a>
+                <h4>woof-woof.</h4>
+                <div class="details"><h4><b>Aprox. 5m from you ● 20 min ago</b></h4></div>
+            </div>
+        </div>
+
+        <div  class="result" >
+            <div class="img" style=" float:left; ">
+                <img src="/static/images/muri.jpeg" height="65px">
+            </div>
+            <div  class="desc">
+                <a href="#" class="title">I can walk dogs</a>
+                <h4>I can pick up. </h4>
+                <div class="details"><h4><b>Aprox. 5m from you ● 20 min ago</b></h4></div>
+
+            </div>
+        </div>
+
+        <div  class="result" >
+            <div class="img" style=" float:left; ">
+                <img src="/static/images/ben.jpeg" height="65px">
+            </div>
+            <div  class="desc">
+                <a href="#" class="title">A phone call</a>
+                <h4>I can help wiht phone calls in German and English. </h4>
+                <div class="details"><h4><b>Aprox. 5m from you ● 20 min ago</b></h4></div>
+
+            </div>
+        </div>
+
+        <div  class="result" >
+            <div class="img" style=" float:left; ">
+                <img src="/static/images/beca.jpeg" height=65px">
+            </div>
+            <div  class="desc">
+                <a href="#" class="title">I can make Margaritas 🍸</a>
+                <h4>Lorem ipsum dolor sit amet, consectetur </h4>
+                <div class="details"><h4><b>Aprox. 5m from you ● 20 min ago</b></h4></div>
+
+            </div>
+        </div>
+
+        <div  class="result" >
+            <div class="img" style=" float:left; ">
+                <img src="/static/images/vini.jpeg" height="65px">
+            </div>
+            <div  class="desc">
+                <a href="#" class="title">I can help with groceries</a>
+                <h4>Lorem ipsum dolor sit amet, consectetur </h4>
+                <div class="details"><h4><b>Aprox. 5m from you ● 20 min ago</b></h4></div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="center" >
+            <div class="pagination" style="left: 35%;">
+                <a href="search?q={{q}}&page={{pagination.page_prev}}">&laquo;</a>
+                {% for i in pagination.page_middle %}
+                <a href="search?q={{q}}&page={{i}}" {% if i == pagination.page %} class="active" {% endif %}>{{i}}</a>
+                {% endfor %}
+                <a href="search?q={{q}}&page={{pagination.page_next}}">&raquo;</a>
+            </div>
+
+
+
+
+        </div>
+
+        <a href="#why" class="bot_button">OFFER ON YOUR KIETZ</a>
+
+    </div>
+    {% if stats.summary.labels|length >= 3 %}
+    <div class="results--sidebar ">
+        <div class="sidebar-modules ">
+
+            {% include "radar.html" %}
+
+        </div>
+        <div class="js-sidebar-ads"></div>
+    </div>
+    {% endif %}
+
+
+</body>
+</html>

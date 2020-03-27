@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+    Urban by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+
+    <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <Url type="text/html" method="get"
+       template="search?q={searchTerms}"/>
+</OpenSearchDescription>
+
+    <meta charset="UTF-8">
+      <meta name="description" content="A brand new search engine designed exclusively for retrieving Fake Stories and their Authors.">
+      <meta name="keywords" content="Fake,Untrue,False,True,News">
+      <meta name="author" content="Vinicius Woloszyn">
+      <title>Untrue News: a fake search engine</title>
+      <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/232/police-cars-revolving-light_1f6a8.png">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+</head>
+<body>
+<link rel="stylesheet" href="static/templated-urban/assets/css/main.css?rand=23423423"/>
+<!-- Header -->
+<!--<header id="header_" class="">-->
+    <!--<h5><a href="#us" class=" scrolly">About us </a></h5>-->
+
+<!--</header>-->
+<div id="main">
+
+    <section id="banner">
+
+        <div class="inner">
+
+
+            <form class="seach" action="search">
+                <h4>Community Overcoming</h4>
+
+
+
+                <input type="text" placeholder="Search for offers on Kietz..." name="q">
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+
+
+
+
+
+            </form>
+
+
+
+            <p>Try <a href="/search?q=refugees">Grocery shopping</a> or <a href="/search?q=Amazon+Rainforest">Help with running errands</a></p>
+
+            {% if top_entities %}
+             <p>Top Trends:
+                    {% for i in top_entities %}
+                    <a   title="{{i.label}} {{i.wikipedia}}"   href="/search?q={{i.label}}" >
+
+                        #{{i.label|truncatechars:15}}</a>
+                    {% endfor %}
+                   </p>
+                    {% endif %}
+
+
+            <p>
+                Help us to help each other and look out for others.
+            </p>
+
+            <div class="n_fake_stories" id="n_fake_stories">0</div>
+
+            <p>Offers close to you</p>
+
+
+
+            <a href="#why" class="button scrolly">Learn More</a>
+
+
+            <script>
+              var counter_list = [10,2000,1000];
+              var display_div = document.getElementById("n_fake_stories");
+              var counter=100;
+              var i = setInterval(function(){
+                // do your thing
+                display_div.innerHTML=counter;
+                counter+=112;
+                if(counter >= counter_list[1]) {
+                    clearInterval(i);
+                }
+            }, 1);
+
+            </script>
+
+
+        </div>
+    </section>
+
+    <!-- Main -->
+
+
+    <!-- Section -->
+    <section id="why" class="wrapper style1">
+        <div class="inner">
+            <!-- 2 Columns -->
+            <div class="flex flex-2">
+                <div class="col col1">
+                    <div class="image round fit">
+                        <a href="generic.html" class="link"><img src="static/templated-urban/images/amazon_fire.jpg"
+                                                                 alt=""/></a>
+                    </div>
+                </div>
+                <div class="col col2">
+                    <h2>Making fake stories findable</h2>
+
+                    <p>Multipurpose Search Engines like Google have been used to retrieve all kinds of content available on Internet. However, when people want to get to know specifically about Fake Stories involving a particular person or a subject, regular search engines don't provide satisfying results.
+
+                        <br><br>
+                        <b>Untrue.News</b> is a unique search engine designed exclusively for retrieving Fake Stories
+                        and their Authors, filling a gap left by Multipurpose tools.</p>
+                    <!--<p>Currently the search engines, for example, Google, retrieve excellent results, however, fake news is addressed mostly on a particular use case: people looking for a specific claim or headline.</p>
+
+                    <p>However, when people are interested in getting to know more about fake stories involving a particular person or a subject -e.g. Amazon forest - it’s not easy or not possible to get all know fake stories involving the topic. For example, when people are looking for a politician, it would retrieves mostly News and wikipedia articles about him/her, Youtube videos, yet no fake claims spread by the person are retrieved.</p>
+                    <img height="30px" align="center" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/223/white-down-pointing-backhand-index_1f447.png">
+                     -->
+                    <!-- <a href="#langauges" class="button scrolly align-center">Learn More</a> -->
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Section -->
+    <section class="wrapper style2" id="langauges">
+        <div class="inner">
+            <!-- 2 Columns -->
+            <div class="flex flex-2">
+                <div class="col col">
+
+                    <h2>Different Languages</h2>
+                    <p>What are the fake stories spread out in Austria or Brazil about “Greta Thunberg”? Untrue News combines fake
+                        stories in different languages around the same subject or person, providing unique results on the user’s language. </p>
+
+                </div>
+                <div class="col col1">
+                    <div class="image round fit">
+                        <a href="generic.html" class="link"><img src="static/templated-urban/images/languages.jpg" alt=""/></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="flex flex-2">
+                <div class="col col1">
+                    <div class="image round fit">
+                        <a href="generic.html" class="link"><img src="static/templated-urban/images/research.jpg"
+                                                                 alt=""/></a>
+                    </div>
+                </div>
+                <div class="col col2">
+                    <h2>Academic Friendly</h2>
+                    <p>This platform acts as an academic umbrella for many people interested in exploring different subjects. For example, User Experience (UX), Big Data Analytics, Open Data, Machine Learning, and Language Technologies.
+Additionally, the source code is available on the internet as an Open Source project, for fostering collaboration and the development of new tools for fighting disinformation.</p>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- Section -->
+    <section class="wrapper style2">
+        <div class="inner">
+            <div class="flex flex-2">
+                <div class="col col2">
+                       <h2>Privacy</h2>
+                    <p> Untrue News distinguishes itself from other search engines by not profiling users: it shows everyone the same search results! User's privacy is a very important to us, and Untrue News makes sure that searchers' privacy is protected, while it also avoids the filter bubble of personalized search results.</p>
+
+                </div>
+
+                                <div class="col col1">
+                    <div class="image round fit">
+                        <a href="generic.html" class="link"><img src="static/templated-urban/images/privacy.jpg"
+                                                                 alt=""/></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section -->
+    <section id="us" class="wrapper style1">
+        <div class="inner">
+            <div class="flex flex-2">
+                <div class="col col2">
+                    <h2>About Us</h2>
+                    <p>We're a collective of people united by a common interest: fight disinformation. <br><br>If you're
+                        interested in collaborating, <a class=" scrolly" href="#contact"> drop a line ✉️ </a>. There's
+                        still a lot to do ;)</p>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Section -->
+    <section id="contact" class="wrapper style2">
+        <div class="inner">
+
+            <div class="col col2">
+
+                <h3>Get in Touch</h3>
+
+                <form action="email/" method="post">
+                    {% csrf_token %}
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+                    <ul class="actions align-center">
+                        <br>
+                        <li><input value="Send Message" class="button special" type="submit"></li>
+                    </ul>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="copyright">
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
+        </ul>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="static/templated-urban/assets/js/jquery.min.js"></script>
+<script src="static/templated-urban/assets/js/jquery.scrolly.min.js"></script>
+<script src="static/templated-urban/assets/js/jquery.scrollex.min.js"></script>
+<script src="static/templated-urban/assets/js/skel.min.js"></script>
+<script src="static/templated-urban/assets/js/util.js"></script>
+<script src="static/templated-urban/assets/js/main.js"></script>
+
+</body>
+</html>

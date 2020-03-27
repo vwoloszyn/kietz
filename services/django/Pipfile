@@ -1,0 +1,32 @@
+[[source]]
+
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+name = "pypi"
+
+
+[packages]
+
+django = "*"
+requests = "*"
+django-widget-tweaks = "*"
+django-crispy-forms = "*"
+#pyyaml = "*"
+#smart-open = "*"
+#gensim = "*"
+#pillow = "*"
+#arxiv= "*"
+#redis= "*"
+#Celery= "*"
+#async= "*"
+#chardet="==3.0.4"
+#textract= "*"
+#textract = {git = "https://github.com/deanmalmgren/textract", editable = true}
+#django-background-tasks="*"
+#wand= "*"
+#tika="*"
+#langdetect="*"
+#xmltodict="*"
+#django-digg-paginator="*"
+pandas="*"
+Elasticsearch="*"

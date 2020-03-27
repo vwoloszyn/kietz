@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  django:
+    container_name: kietz_interface
+    build:
+      context: ./services/django
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./services/django:/var/www/django
+    ports:
+      - "81:8000"
+    networks:
+      - fake_net
+
+
+networks:
+  fake_net:
