@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('search', search, name='search'),
+    path('login', login, name='login'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -18,17 +18,6 @@
 
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74451848-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-74451848-2');
-</script>
-
-
 
     <style type="text/css">
 
@@ -789,6 +778,7 @@ padding-top: 10px;
 
 
 }
+
     </style>
 
 
@@ -983,19 +973,19 @@ margin-top:10px;
 
 
 
-        <div class="center" >
-            <div class="pagination" style="left: 35%;">
-                <a href="search?q={{q}}&page={{pagination.page_prev}}">&laquo;</a>
-                {% for i in pagination.page_middle %}
-                <a href="search?q={{q}}&page={{i}}" {% if i == pagination.page %} class="active" {% endif %}>{{i}}</a>
-                {% endfor %}
-                <a href="search?q={{q}}&page={{pagination.page_next}}">&raquo;</a>
-            </div>
+        <!--<div class="center" >-->
+            <!--<div class="pagination" style="left: 35%;">-->
+                <!--<a href="search?q={{q}}&page={{pagination.page_prev}}">&laquo;</a>-->
+                <!--{% for i in pagination.page_middle %}-->
+                <!--<a href="search?q={{q}}&page={{i}}" {% if i == pagination.page %} class="active" {% endif %}>{{i}}</a>-->
+                <!--{% endfor %}-->
+                <!--<a href="search?q={{q}}&page={{pagination.page_next}}">&raquo;</a>-->
+            <!--</div>-->
 
 
 
 
-        </div>
+        <!--</div>-->
 
         <a href="#why" class="bot_button">OFFER ON YOUR KIETZ</a>
 

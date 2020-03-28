@@ -3829,11 +3829,14 @@
 
 			#banner {
 				min-height: 0;
-				padding: 3em 2em 4em 2em;
+				#padding: 0em 0em 0em 0em;
 			}
 
 				#banner .inner {
-					width: 100%;
+					#width: 100%;
+					padding-left: 5px;
+                    padding-right: 5px;
+
 				}
 
 				#banner h1 {
